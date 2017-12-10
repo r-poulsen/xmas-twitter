@@ -3,6 +3,8 @@ A Twitter-powered Christmas tree
 
 Lights up the LEDs on [the PiHit Raspberry Pi XMas tree](https://thepihut.com/products/3d-xmas-tree-for-raspberry-pi) when certain Christmassy hashtags are used on Twitter.
 
+![Demonstration](demo.gif)
+
 It has language support, but you'll have to add your own language.  The code should be pretty straightforward.
 
 ## Install required libs
