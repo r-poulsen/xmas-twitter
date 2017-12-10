@@ -9,6 +9,8 @@ To install the supported libs:
 ```
 $ sudo apt-get install python-gpiozero python3-gpiozero python-tweepy
 ```
+To connect to the Twitter API, you'll need application keys that you generate on https://apps.twitter.com and add to the top of xmas-twitter.py.
+
 To run on boot, copy the xmaslights.service into /etc/systemd/system, edit the path to the binary and enable the service:
 ```
 $ sudo systemctl daemon-reload
