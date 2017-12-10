@@ -5,18 +5,20 @@ Lights up the LEDs on [the PiHit Raspberry Pi XMas tree](https://thepihut.com/pr
 
 It has language support, but you'll have to add your own language.  The code should be pretty straightforward. Although you probably get the best results by just going with the default.
 
-To install the supported libs:
+## Install required libs
 ```
 $ sudo apt-get install python-gpiozero python3-gpiozero python-tweepy
 ```
+## Setup
 To connect to the Twitter API, you'll need application keys that you generate on https://apps.twitter.com and add to the top of xmas-twitter.py.
 
-To run on boot, copy the xmaslights.service into /etc/systemd/system, edit the path to the binary and enable the service:
+## Run on boot
+To run on boot, copy the xmaslights.service into /etc/systemd/system, edit the path to the binary and the commandline arguments if you don't go with the defaults and enable the service:
 ```
 $ sudo systemctl daemon-reload
 $ sudo systemctl enable xmaslights
 ```
-
+## Usage
 ```
 usage: xmas-twitter.py [-h] [--lang LANG] [--star-on-time N]
                        [--star-off-time N] [--star-twinkle N]
