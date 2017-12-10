@@ -1,0 +1,12 @@
+[Unit]
+Description=Christmas Lights
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python2 /home/pi/xmas-twitter/xmas-twitter.py --lang da,en
+User=pi
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
