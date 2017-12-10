@@ -3,7 +3,7 @@ Description=Christmas Lights
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/python2 /home/pi/xmas-twitter/xmas-twitter.py --lang da,en
+ExecStart=/usr/bin/python2 /home/pi/xmas-twitter/xmas-twitter.py
 User=pi
 Restart=always
 RestartSec=3
