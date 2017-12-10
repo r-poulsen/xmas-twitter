@@ -19,6 +19,7 @@ To run on boot, copy the xmaslights.service into /etc/systemd/system, edit the p
 ```
 $ sudo systemctl daemon-reload
 $ sudo systemctl enable xmaslights
+$ sudo systemctl start xmaslights
 ```
 ## Usage
 ```
