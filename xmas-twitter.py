@@ -46,24 +46,19 @@ class StdOutListener(StreamListener):
                 elif ( tag['text'].lower() in monitor_words['tree']):
                     choice(tree).blink(on_time = args.tree_on_time, fade_out_time = args.tree_off_time, n = args.tree_twinkle )
         except KeyError, e:
-            # Happens sometimes.  Uncomment the print and exit statements to dig into it
-            print('KeyError - reason "%s"' % str(e))
-            # print(data)
-            # exit(1)
+            # Happens sometimes.  The data looks something like this:
+            # Maybe Twitter is warning about falling behind?
+            # {"limit":{"track":6,"timestamp_ms":"1514107882539"}}
+            if ( args.debug ):
+                print "KeyError:" + e
         return True
 
     def on_error(self, status_code):
-        global retry
         print(status_code)
-        retry+=1
-        sleep(retry)
         return True
 
     def on_timeout(self):
-        global retry
         print('Timeout...')
-        retry+=1
-        sleep(retry)
         return True
 
 parser = argparse.ArgumentParser(description='A Twitter-powered Christmas tree.')
